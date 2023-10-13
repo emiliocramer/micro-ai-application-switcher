@@ -2,7 +2,7 @@
 
 Welcome to my AI Keyboard Configurator, a locally hosted solution to dynamically change the keymaps of your custom keyboard based on the active application.
 
-![Keyboard Image](./assets/wrklouder-creator-micro.png)
+![Keyboard Image](web-app/assets/wrklouder-creator-micro.png)
 
 ## Table of Contents
 
@@ -10,7 +10,6 @@ Welcome to my AI Keyboard Configurator, a locally hosted solution to dynamically
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Contribute](#contribute)
 - [License](#license)
 
 ## Features
