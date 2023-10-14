@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", "Helvetica Neue", Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -18,27 +18,43 @@ body, html {
 
 .interface {
     flex: 35%;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    border: 1px solid black;
     background-color: #f8f8f8;
+    align-content: center;
 }
 
 h1, h2 {
-    border: 1px solid black;
-    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+h2 {
+    margin-top: 30px;
 }
 
 button {
     padding: 10px 15px;
+    align-self: center;
     border: none;
     background-color: #333;
+    border-radius: 10px;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
     background-color: #555;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #detectedApps {
