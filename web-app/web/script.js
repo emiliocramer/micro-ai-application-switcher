@@ -2,7 +2,7 @@ async function checkKeyboard() {
     console.log("...beginning keyboard check")
     try {
         const devices = await navigator.hid.requestDevice({
-            filters: [{vendorId: YOUR_KEYBOARD_VENDOR_ID}]
+            filters: [{vendorId: 0x574c}]
         });
 
         if (devices.length === 0) {
