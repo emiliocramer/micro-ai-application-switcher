@@ -18,6 +18,10 @@
 		AD1DAF5B2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF5A2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift */; };
 		AD1DAF692ADBFDAD00D7F1F1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */; };
 		AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */; };
+		AD1DAF702ADC07C400D7F1F1 /* LayerCreationPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF6F2ADC07C400D7F1F1 /* LayerCreationPopupView.swift */; };
+		AD1DAF722ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */; };
+		AD1DAF742ADC0D6700D7F1F1 /* LayerManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */; };
+		AD1DAF762ADC0D8100D7F1F1 /* AppConnectivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		AD1DAF5A2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroLayerBuilderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		AD1DAF6F2ADC07C400D7F1F1 /* LayerCreationPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCreationPopupView.swift; sourceTree = "<group>"; };
+		AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConnectivityView.swift; sourceTree = "<group>"; };
+		AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerManagementView.swift; sourceTree = "<group>"; };
+		AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectivityListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		AD1DAF362ADBFC4200D7F1F1 /* MicroLayerBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				AD1DAF6E2ADC07B400D7F1F1 /* components */,
 				AD1DAF372ADBFC4200D7F1F1 /* MicroLayerBuilderApp.swift */,
 				AD1DAF392ADBFC4200D7F1F1 /* ContentView.swift */,
 				AD1DAF3B2ADBFC4300D7F1F1 /* Assets.xcassets */,
@@ -148,6 +157,17 @@
 				AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD1DAF6E2ADC07B400D7F1F1 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF6F2ADC07C400D7F1F1 /* LayerCreationPopupView.swift */,
+				AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */,
+				AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */,
+				AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1DAF442ADBFC4300D7F1F1 /* MicroLayerBuilder.xcdatamodeld in Sources */,
+				AD1DAF742ADC0D6700D7F1F1 /* LayerManagementView.swift in Sources */,
 				AD1DAF412ADBFC4300D7F1F1 /* Persistence.swift in Sources */,
 				AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */,
 				AD1DAF3A2ADBFC4200D7F1F1 /* ContentView.swift in Sources */,
+				AD1DAF762ADC0D8100D7F1F1 /* AppConnectivityListView.swift in Sources */,
+				AD1DAF702ADC07C400D7F1F1 /* LayerCreationPopupView.swift in Sources */,
+				AD1DAF722ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift in Sources */,
 				AD1DAF382ADBFC4200D7F1F1 /* MicroLayerBuilderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +477,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Micro Toolkit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +506,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Micro Toolkit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

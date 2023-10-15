@@ -1,56 +1,56 @@
 import SwiftUI
 
-
-
 struct ContentView: View {
     @ObservedObject var keyboardManager = KeyboardManager()
     @State private var detectedApps: [String] = []
+    @State private var showLayerCreationPopup: Bool = false
+    @State private var appForLayerCreation: String = ""
+    @State private var availableLayers: [String] = ["Xcode", "Photoshop"]
+    @State private var activeLayer: String = "Xcode"
 
     var body: some View {
         VStack(spacing: 20) {
             Text("It's time for the perfect keyboard.")
+                .padding(.top, 20)
                 .font(.title)
-
-            RoundedRectangle(cornerRadius: 10)
-                .fill(keyboardManager.isKeyboardConnected ? Color.green : Color.gray)
-                .frame(height: 50)
-                .overlay(Text(keyboardManager.isKeyboardConnected ? "Micro Pad Connected" : "Connect your Work Louder Micro Pad to begin"))
+            
+            KeyboardConnectivityView(keyboardManager: keyboardManager)
 
             Text("Connected Apps:")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 10)
                 .padding(.bottom, -10)
-            
-            List(detectedApps, id: \.self) { app in
-                Text(app)
-            }
 
-            HStack {
-                Button("Switch to Xcode Layer", action: switchToXcodeLayer)
-                Button("Switch to Photoshop Layer", action: switchToPhotoshopLayer)
-            }
+            AppConnectivityListView(detectedApps: detectedApps, addLayerAction: { app in
+                appForLayerCreation = app
+                showLayerCreationPopup = true
+            })
+
+            LayerManagementView(availableLayers: availableLayers, activeLayer: activeLayer, switchToLayer: switchToLayer(_:))
+
         }
         .padding()
         .onAppear {
             keyboardManager.startDetection()
             fetchRunningApps()
-
         }
+        .sheet(isPresented: $showLayerCreationPopup, content: {
+            LayerCreationPopupView(appName: appForLayerCreation, addLayer: { newLayer in
+                self.availableLayers.append(newLayer)
+                self.showLayerCreationPopup = false
+            }, isPresented: $showLayerCreationPopup)
+        })
     }
-    
+
     func fetchRunningApps() {
         let ws = NSWorkspace.shared
         let runningApps = ws.runningApplications
         detectedApps = runningApps.compactMap { $0.localizedName }
     }
 
-    func switchToXcodeLayer() {
-        // Logic to switch to Xcode layer
-    }
-
-    func switchToPhotoshopLayer() {
-        // Logic to switch to Photoshop layer
+    func switchToLayer(_ layer: String) {
+        activeLayer = layer
     }
 }
 
