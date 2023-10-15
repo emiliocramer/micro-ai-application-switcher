@@ -23,8 +23,10 @@ struct ContentView: View {
                 .padding(.bottom, -10)
 
             AppConnectivityListView(detectedApps: detectedApps, addLayerAction: { app in
-                appForLayerCreation = app
-                showLayerCreationPopup = true
+                withAnimation {
+                    appForLayerCreation = app
+                    showLayerCreationPopup = true
+                }
             })
 
             LayerManagementView(availableLayers: availableLayers, activeLayer: activeLayer, switchToLayer: switchToLayer(_:))
@@ -45,7 +47,7 @@ struct ContentView: View {
 
     func fetchRunningApps() {
         let ws = NSWorkspace.shared
-        let runningApps = ws.runningApplications
+        let runningApps = ws.runningApplications.filter { $0.activationPolicy == .regular }
         detectedApps = runningApps.compactMap { $0.localizedName }
     }
 
