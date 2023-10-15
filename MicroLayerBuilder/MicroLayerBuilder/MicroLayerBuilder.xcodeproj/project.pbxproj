@@ -16,6 +16,8 @@
 		AD1DAF4F2ADBFC4400D7F1F1 /* MicroLayerBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF4E2ADBFC4400D7F1F1 /* MicroLayerBuilderTests.swift */; };
 		AD1DAF592ADBFC4400D7F1F1 /* MicroLayerBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF582ADBFC4400D7F1F1 /* MicroLayerBuilderUITests.swift */; };
 		AD1DAF5B2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF5A2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift */; };
+		AD1DAF692ADBFDAD00D7F1F1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */; };
+		AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AD1DAF542ADBFC4400D7F1F1 /* MicroLayerBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroLayerBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1DAF582ADBFC4400D7F1F1 /* MicroLayerBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroLayerBuilderUITests.swift; sourceTree = "<group>"; };
 		AD1DAF5A2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroLayerBuilderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1DAF692ADBFDAD00D7F1F1 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				AD1DAF4D2ADBFC4400D7F1F1 /* MicroLayerBuilderTests */,
 				AD1DAF572ADBFC4400D7F1F1 /* MicroLayerBuilderUITests */,
 				AD1DAF352ADBFC4200D7F1F1 /* Products */,
+				AD1DAF672ADBFDAD00D7F1F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +112,7 @@
 				AD1DAF452ADBFC4300D7F1F1 /* MicroLayerBuilder.entitlements */,
 				AD1DAF422ADBFC4300D7F1F1 /* MicroLayerBuilder.xcdatamodeld */,
 				AD1DAF3D2ADBFC4300D7F1F1 /* Preview Content */,
+				AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */,
 			);
 			path = MicroLayerBuilder;
 			sourceTree = "<group>";
@@ -133,6 +140,14 @@
 				AD1DAF5A2ADBFC4400D7F1F1 /* MicroLayerBuilderUITestsLaunchTests.swift */,
 			);
 			path = MicroLayerBuilderUITests;
+			sourceTree = "<group>";
+		};
+		AD1DAF672ADBFDAD00D7F1F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF682ADBFDAD00D7F1F1 /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +282,7 @@
 			files = (
 				AD1DAF442ADBFC4300D7F1F1 /* MicroLayerBuilder.xcdatamodeld in Sources */,
 				AD1DAF412ADBFC4300D7F1F1 /* Persistence.swift in Sources */,
+				AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */,
 				AD1DAF3A2ADBFC4200D7F1F1 /* ContentView.swift in Sources */,
 				AD1DAF382ADBFC4200D7F1F1 /* MicroLayerBuilderApp.swift in Sources */,
 			);
