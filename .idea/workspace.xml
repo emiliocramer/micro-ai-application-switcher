@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a183fc9-7df2-47df-8a51-9426ec0c679e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/AppConnectivityListView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/Keyboard/KeyView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/KeyboardGraphicView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/KeyboardBridge/KeyboardBridge.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/KeyboardBridge/KeyboardBridge.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder-Bridging-Header.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Models/AppModels.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Views/KeymapConfigView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Views/LayerConfigView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/.idea/ai-micro-switcher.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mac-app" beforeDir="false" afterPath="$PROJECT_DIR$/mac-app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mac-app/Sources/App/configure.swift" beforeDir="false" afterPath="$PROJECT_DIR$/mac-app/Sources/App/configure.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mac-app/Sources/App/routes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/mac-app/Sources/App/routes.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/web/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/web/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/web/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/web/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder.xcodeproj/project.xcworkspace/xcuserdata/emiliocramer.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder.xcodeproj/project.xcworkspace/xcuserdata/emiliocramer.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/ContentView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/KeyboardManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/KeyboardManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilderApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilderApp.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/components/AppConnectivityListView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/components/KeyboardConnectivityView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/KeyboardConnectivityView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/components/LayerCreationPopupView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/LayerCreationPopupView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/components/LayerManagementView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/MicroLayerBuilder/MicroLayerBuilder/MicroLayerBuilder/Components/LayerManagementView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +35,18 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="global-dfuse/eth-mainnet" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="jd44kgw9" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,22 +68,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/emiliocramer/developer/prsnl/worklouder/ai-micro-switcher&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/emiliocramer/developer/prsnl/worklouder/ai-micro-switcher",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-app" />
@@ -117,6 +144,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

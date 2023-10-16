@@ -22,6 +22,11 @@
 		AD1DAF722ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */; };
 		AD1DAF742ADC0D6700D7F1F1 /* LayerManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */; };
 		AD1DAF762ADC0D8100D7F1F1 /* AppConnectivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */; };
+		AD1DAF792ADD3AB500D7F1F1 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF782ADD3AB500D7F1F1 /* AppModels.swift */; };
+		AD1DAF7E2ADD471A00D7F1F1 /* LayerConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF7D2ADD471A00D7F1F1 /* LayerConfigView.swift */; };
+		AD1DAF802ADD472500D7F1F1 /* KeymapConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF7F2ADD472500D7F1F1 /* KeymapConfigView.swift */; };
+		AD1DAF8B2ADD505C00D7F1F1 /* KeyboardBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF8A2ADD505C00D7F1F1 /* KeyboardBridge.m */; };
+		AD1DAF912ADD650900D7F1F1 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF902ADD650900D7F1F1 /* KeyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,13 @@
 		AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConnectivityView.swift; sourceTree = "<group>"; };
 		AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerManagementView.swift; sourceTree = "<group>"; };
 		AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectivityListView.swift; sourceTree = "<group>"; };
+		AD1DAF782ADD3AB500D7F1F1 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		AD1DAF7D2ADD471A00D7F1F1 /* LayerConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerConfigView.swift; sourceTree = "<group>"; };
+		AD1DAF7F2ADD472500D7F1F1 /* KeymapConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeymapConfigView.swift; sourceTree = "<group>"; };
+		AD1DAF8A2ADD505C00D7F1F1 /* KeyboardBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardBridge.m; sourceTree = "<group>"; };
+		AD1DAF8C2ADD50B900D7F1F1 /* MicroLayerBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MicroLayerBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD1DAF8E2ADD511600D7F1F1 /* KeyboardBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardBridge.h; sourceTree = "<group>"; };
+		AD1DAF902ADD650900D7F1F1 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +125,10 @@
 		AD1DAF362ADBFC4200D7F1F1 /* MicroLayerBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				AD1DAF6E2ADC07B400D7F1F1 /* components */,
+				AD1DAF892ADD501D00D7F1F1 /* KeyboardBridge */,
+				AD1DAF7C2ADD46F400D7F1F1 /* Views */,
+				AD1DAF772ADD3A8400D7F1F1 /* Models */,
+				AD1DAF6E2ADC07B400D7F1F1 /* Components */,
 				AD1DAF372ADBFC4200D7F1F1 /* MicroLayerBuilderApp.swift */,
 				AD1DAF392ADBFC4200D7F1F1 /* ContentView.swift */,
 				AD1DAF3B2ADBFC4300D7F1F1 /* Assets.xcassets */,
@@ -122,6 +137,7 @@
 				AD1DAF422ADBFC4300D7F1F1 /* MicroLayerBuilder.xcdatamodeld */,
 				AD1DAF3D2ADBFC4300D7F1F1 /* Preview Content */,
 				AD1DAF6A2ADBFDD800D7F1F1 /* KeyboardManager.swift */,
+				AD1DAF8C2ADD50B900D7F1F1 /* MicroLayerBuilder-Bridging-Header.h */,
 			);
 			path = MicroLayerBuilder;
 			sourceTree = "<group>";
@@ -159,15 +175,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AD1DAF6E2ADC07B400D7F1F1 /* components */ = {
+		AD1DAF6E2ADC07B400D7F1F1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AD1DAF8F2ADD64FB00D7F1F1 /* Keyboard */,
 				AD1DAF6F2ADC07C400D7F1F1 /* LayerCreationPopupView.swift */,
 				AD1DAF712ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift */,
 				AD1DAF732ADC0D6700D7F1F1 /* LayerManagementView.swift */,
 				AD1DAF752ADC0D8100D7F1F1 /* AppConnectivityListView.swift */,
 			);
-			path = components;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AD1DAF772ADD3A8400D7F1F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF782ADD3AB500D7F1F1 /* AppModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD1DAF7C2ADD46F400D7F1F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF7D2ADD471A00D7F1F1 /* LayerConfigView.swift */,
+				AD1DAF7F2ADD472500D7F1F1 /* KeymapConfigView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD1DAF892ADD501D00D7F1F1 /* KeyboardBridge */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF8A2ADD505C00D7F1F1 /* KeyboardBridge.m */,
+				AD1DAF8E2ADD511600D7F1F1 /* KeyboardBridge.h */,
+			);
+			path = KeyboardBridge;
+			sourceTree = "<group>";
+		};
+		AD1DAF8F2ADD64FB00D7F1F1 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DAF902ADD650900D7F1F1 /* KeyView.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +289,7 @@
 				TargetAttributes = {
 					AD1DAF332ADBFC4200D7F1F1 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					AD1DAF492ADBFC4400D7F1F1 = {
 						CreatedOnToolsVersion = 15.0;
@@ -303,11 +355,16 @@
 				AD1DAF442ADBFC4300D7F1F1 /* MicroLayerBuilder.xcdatamodeld in Sources */,
 				AD1DAF742ADC0D6700D7F1F1 /* LayerManagementView.swift in Sources */,
 				AD1DAF412ADBFC4300D7F1F1 /* Persistence.swift in Sources */,
+				AD1DAF7E2ADD471A00D7F1F1 /* LayerConfigView.swift in Sources */,
+				AD1DAF792ADD3AB500D7F1F1 /* AppModels.swift in Sources */,
+				AD1DAF802ADD472500D7F1F1 /* KeymapConfigView.swift in Sources */,
 				AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */,
 				AD1DAF3A2ADBFC4200D7F1F1 /* ContentView.swift in Sources */,
 				AD1DAF762ADC0D8100D7F1F1 /* AppConnectivityListView.swift in Sources */,
 				AD1DAF702ADC07C400D7F1F1 /* LayerCreationPopupView.swift in Sources */,
+				AD1DAF912ADD650900D7F1F1 /* KeyView.swift in Sources */,
 				AD1DAF722ADC0D4500D7F1F1 /* KeyboardConnectivityView.swift in Sources */,
+				AD1DAF8B2ADD505C00D7F1F1 /* KeyboardBridge.m in Sources */,
 				AD1DAF382ADBFC4200D7F1F1 /* MicroLayerBuilderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MicroLayerBuilder/MicroLayerBuilder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -488,6 +546,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilio.MicroLayerBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MicroLayerBuilder/MicroLayerBuilder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -497,6 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MicroLayerBuilder/MicroLayerBuilder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -517,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilio.MicroLayerBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MicroLayerBuilder/MicroLayerBuilder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

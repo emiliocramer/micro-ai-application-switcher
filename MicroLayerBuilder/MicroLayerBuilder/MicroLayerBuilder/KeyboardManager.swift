@@ -5,8 +5,8 @@ import IOKit.hid
 class KeyboardManager: ObservableObject {
     var manager: IOHIDManager?
     var devices: CFSet?
-    let targetVendorID: Int32 = 0x574c  // Example Vendor ID
-    let targetProductID: Int32 = 0xe6e3  // Example Product ID
+    let targetVendorID: Int32 = 0x574c
+    let targetProductID: Int32 = 0xe6e3
     @Published var isKeyboardConnected: Bool = false
 
     init() {

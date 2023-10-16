@@ -18,7 +18,7 @@ struct LayerCreationPopupView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Create Layer for \(appName.isEmpty ? "App" : appName)")
+            Text("Create New Layer")
                 .font(.title)
 
             TextField("Layer Name", text: $layerName)
@@ -54,6 +54,7 @@ struct LayerCreationPopupView: View {
             }
             .padding()
         }
-        .padding()
+        .padding(.horizontal, 100)
+        .padding(.vertical, 20)
     }
 }
