@@ -2,14 +2,14 @@ import SwiftUI
 
 struct LayerCreationPopupView: View {
     var appName: String
-    var addLayer: (String) -> Void
+    var addLayer: (Layer) -> Void
 
     @Binding var isPresented: Bool
 
     @State private var isLayerNameValid: Bool = true
     @State private var layerName: String
 
-    init(appName: String, addLayer: @escaping (String) -> Void, isPresented: Binding<Bool>) {
+    init(appName: String, addLayer: @escaping (Layer) -> Void, isPresented: Binding<Bool>) {
         self.appName = appName
         self.addLayer = addLayer
         self._isPresented = isPresented
@@ -30,7 +30,13 @@ struct LayerCreationPopupView: View {
                 }
 
             Button(action: {
-                addLayer(layerName)
+                getShortcutsFor(appName: appName) { shortcuts in
+                    let defaultKeyMappings = Array(shortcuts.prefix(12))
+                    let defaultKeyMappingNames = Array(repeating: appName, count: min(12, shortcuts.count))
+
+                    let newLayer = Layer(applicationName: appName, name: layerName, keyMappings: defaultKeyMappings, KeyMappingNames: defaultKeyMappingNames)
+                    addLayer(newLayer)
+                }
                 isPresented = false
             }) {
                 Text("Create Layer")

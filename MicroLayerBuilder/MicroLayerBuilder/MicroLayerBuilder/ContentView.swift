@@ -5,8 +5,8 @@ struct ContentView: View {
         @State private var detectedApps: [AppDetails] = []
         @State private var showLayerCreationPopup: Bool = false
         @State private var appForLayerCreation: String = ""
-        @State private var availableLayers: [String] = ["Xcode", "Photoshop"]
-        @State private var activeLayer: String = "Xcode"
+        @State private var availableLayers: [Layer] = []
+        @State private var activeLayer: Layer?
 
 
         var body: some View {
@@ -15,18 +15,26 @@ struct ContentView: View {
                     .frame(width: 700, height: 500)
                     .padding(10)
 
-                KeymapConfigView()
+                KeymapConfigView(activeLayer: $activeLayer.wrappedValue)
                     .frame(width: 500, height: 500)
                     .background(Color.gray.opacity(0.2).cornerRadius(30))
                     .padding(10)
+                
+                #if DEBUG
+                DevLogView(availableLayers: availableLayers, activeLayer: activeLayer)
+                    .frame(width: 200)
+                #endif
+                
             }
             .onAppear {
                 keyboardManager.startDetection()
                 fetchRunningApps()
+                self.availableLayers = StorageManager().fetchLayers()
             }
             .sheet(isPresented: $showLayerCreationPopup, content: {
                 LayerCreationPopupView(appName: appForLayerCreation, addLayer: { newLayer in
                     self.availableLayers.append(newLayer)
+                    StorageManager().save(layers: availableLayers)
                     self.showLayerCreationPopup = false
                 }, isPresented: $showLayerCreationPopup)
             })
@@ -42,7 +50,7 @@ struct ContentView: View {
         }
     }
     
-    func switchToLayer(_ layer: String) {
+    func switchToLayer(_ layer: Layer) {
         activeLayer = layer
     }
 }

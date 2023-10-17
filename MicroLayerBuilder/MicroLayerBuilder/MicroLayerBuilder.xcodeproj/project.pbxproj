@@ -27,6 +27,10 @@
 		AD1DAF802ADD472500D7F1F1 /* KeymapConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF7F2ADD472500D7F1F1 /* KeymapConfigView.swift */; };
 		AD1DAF8B2ADD505C00D7F1F1 /* KeyboardBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF8A2ADD505C00D7F1F1 /* KeyboardBridge.m */; };
 		AD1DAF912ADD650900D7F1F1 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DAF902ADD650900D7F1F1 /* KeyView.swift */; };
+		ADA5EF372ADE8F890021C99D /* LayerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA5EF362ADE8F890021C99D /* LayerStorage.swift */; };
+		ADA5EF3A2ADE93740021C99D /* DevLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA5EF392ADE93740021C99D /* DevLogView.swift */; };
+		ADA5EF3D2ADE9DC80021C99D /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA5EF3C2ADE9DC80021C99D /* OpenAI.swift */; };
+		ADA5EF3F2ADE9EB90021C99D /* .env in Resources */ = {isa = PBXBuildFile; fileRef = ADA5EF3E2ADE9EB90021C99D /* .env */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		AD1DAF8C2ADD50B900D7F1F1 /* MicroLayerBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MicroLayerBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD1DAF8E2ADD511600D7F1F1 /* KeyboardBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardBridge.h; sourceTree = "<group>"; };
 		AD1DAF902ADD650900D7F1F1 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
+		ADA5EF362ADE8F890021C99D /* LayerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerStorage.swift; sourceTree = "<group>"; };
+		ADA5EF392ADE93740021C99D /* DevLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevLogView.swift; sourceTree = "<group>"; };
+		ADA5EF3C2ADE9DC80021C99D /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		ADA5EF3E2ADE9EB90021C99D /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,9 @@
 		AD1DAF362ADBFC4200D7F1F1 /* MicroLayerBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				ADA5EF3E2ADE9EB90021C99D /* .env */,
+				ADA5EF3B2ADE9DB70021C99D /* Utils */,
+				ADA5EF352ADE8F7D0021C99D /* Storage */,
 				AD1DAF892ADD501D00D7F1F1 /* KeyboardBridge */,
 				AD1DAF7C2ADD46F400D7F1F1 /* Views */,
 				AD1DAF772ADD3A8400D7F1F1 /* Models */,
@@ -219,6 +230,31 @@
 				AD1DAF902ADD650900D7F1F1 /* KeyView.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		ADA5EF352ADE8F7D0021C99D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5EF362ADE8F890021C99D /* LayerStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		ADA5EF382ADE93610021C99D /* Devel */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5EF392ADE93740021C99D /* DevLogView.swift */,
+			);
+			path = Devel;
+			sourceTree = "<group>";
+		};
+		ADA5EF3B2ADE9DB70021C99D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5EF382ADE93610021C99D /* Devel */,
+				ADA5EF3C2ADE9DC80021C99D /* OpenAI.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA5EF3F2ADE9EB90021C99D /* .env in Resources */,
 				AD1DAF3F2ADBFC4300D7F1F1 /* Preview Assets.xcassets in Resources */,
 				AD1DAF3C2ADBFC4300D7F1F1 /* Assets.xcassets in Resources */,
 			);
@@ -357,7 +394,10 @@
 				AD1DAF412ADBFC4300D7F1F1 /* Persistence.swift in Sources */,
 				AD1DAF7E2ADD471A00D7F1F1 /* LayerConfigView.swift in Sources */,
 				AD1DAF792ADD3AB500D7F1F1 /* AppModels.swift in Sources */,
+				ADA5EF3D2ADE9DC80021C99D /* OpenAI.swift in Sources */,
 				AD1DAF802ADD472500D7F1F1 /* KeymapConfigView.swift in Sources */,
+				ADA5EF372ADE8F890021C99D /* LayerStorage.swift in Sources */,
+				ADA5EF3A2ADE93740021C99D /* DevLogView.swift in Sources */,
 				AD1DAF6B2ADBFDD800D7F1F1 /* KeyboardManager.swift in Sources */,
 				AD1DAF3A2ADBFC4200D7F1F1 /* ContentView.swift in Sources */,
 				AD1DAF762ADC0D8100D7F1F1 /* AppConnectivityListView.swift in Sources */,

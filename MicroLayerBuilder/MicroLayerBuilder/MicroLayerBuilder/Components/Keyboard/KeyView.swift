@@ -17,7 +17,8 @@ struct KeyView: View {
         }) {
             Text(keyMapping)
                 .frame(width: 75, height: 75)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
+                .fontWeight(.bold)
         }
         .background(Color.gray.opacity(0.2))
         .cornerRadius(20)

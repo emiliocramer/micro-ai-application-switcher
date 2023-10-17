@@ -5,8 +5,8 @@ struct LayerConfigView: View {
     @Binding var detectedApps: [AppDetails]
     @Binding var showLayerCreationPopup: Bool
     @Binding var appForLayerCreation: String
-    @Binding var availableLayers: [String]
-    @Binding var activeLayer: String
+    @Binding var availableLayers: [Layer]
+    @Binding var activeLayer: Layer?
 
     var body: some View {
         VStack(spacing: 20) {

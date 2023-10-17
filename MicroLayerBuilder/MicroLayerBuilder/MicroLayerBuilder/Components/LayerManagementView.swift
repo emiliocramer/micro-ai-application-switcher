@@ -1,22 +1,22 @@
 import SwiftUI
 
 struct LayerManagementView: View {
-    var availableLayers: [String]
-    var activeLayer: String
-    var switchToLayer: (String) -> Void
+    var availableLayers: [Layer]
+    var activeLayer: Layer?
+    var switchToLayer: (Layer) -> Void
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(availableLayers, id: \.self) { layer in
-                    if layer == activeLayer {
-                        Text(layer)
+                ForEach(availableLayers, id: \.id) { layer in
+                    if layer.name == activeLayer?.name {
+                        Text(layer.name)
                             .padding()
                             .background(Color.green)
                             .cornerRadius(10)
                     } else {
                         Button(action: { switchToLayer(layer) }) {
-                            Text(layer)
+                            Text(layer.name)
                                 .padding()
                                 .background(Color.blue.opacity(0.1))
                                 .cornerRadius(10)
